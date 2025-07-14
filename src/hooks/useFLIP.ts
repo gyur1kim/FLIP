@@ -11,7 +11,6 @@ interface UseFLIPOptions {
 }
 
 interface UseFLIPReturn {
-  elementRefs: React.RefObject<{ [key: string]: HTMLDivElement | null }>;
   isAnimating: boolean;
   executeFLIPAnimation: (onDOMUpdate: () => void) => void;
   getElementRef: (key: string) => (el: HTMLDivElement | null) => void;
@@ -114,7 +113,6 @@ export const useFLIP = (options: UseFLIPOptions = {}): UseFLIPReturn => {
   }, []);
 
   return {
-    elementRefs,
     isAnimating,
     executeFLIPAnimation,
     getElementRef,
