@@ -7,7 +7,7 @@ const Seventh = () => {
 
   return (
     <div className="page">
-      <h1 className="pb-[100px]">Last - 변화된 위치 계산하기</h1>
+      <h1 className="pb-[100px]">Last - 변화된 위치 기억하기</h1>
 
       <div className="flex gap-4 w-full items-center">
         {/* 실제 동작하는 예제 */}

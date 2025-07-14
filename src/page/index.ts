@@ -7,3 +7,4 @@ export { default as Sixth } from "./6_StepF";
 export { default as Seventh } from "./7_StepL";
 export { default as Eighth } from "./8_StepI";
 export { default as Ninth } from "./9_StepP";
+export { default as Tenth } from "./10_FLIP-code";
