@@ -21,6 +21,7 @@ export const useFLIP = (options: UseFLIPOptions = {}): UseFLIPReturn => {
 
   const [isAnimating, setIsAnimating] = useState(false);
   const [shouldAnimate, setShouldAnimate] = useState(false);
+
   const elementRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const previousPositions = useRef<ElementPosition[]>([]);
   const domUpdateCallback = useRef<(() => void) | null>(null);
@@ -59,16 +60,33 @@ export const useFLIP = (options: UseFLIPOptions = {}): UseFLIPReturn => {
             const previousPosition = previousPositions.current.find(pos => pos.key === key);
             if (previousPosition) {
               const currentRect = element.getBoundingClientRect();
+
               const deltaX = previousPosition.rect.left - currentRect.left;
               const deltaY = previousPosition.rect.top - currentRect.top;
 
+              const scaleX = previousPosition.rect.width / currentRect.width;
+              const scaleY = previousPosition.rect.height / currentRect.height;
+
+              console.log(
+                "x변화량 :",
+                deltaX,
+                "y변화량 :",
+                deltaY,
+                "x스케일 :",
+                scaleX,
+                "y스케일 :",
+                scaleY
+              );
+
               // Invert: 이전 위치로 이동 (화면 그리기 전에 적용)
-              element.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+              element.style.transformOrigin = "top left";
+              element.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${scaleX}, ${scaleY})`;
               element.style.transition = "none";
 
               // Play: 다음 프레임에서 원래 위치로 애니메이션
               requestAnimationFrame(() => {
                 element.style.transform = "";
+                element.style.transformOrigin = "top left";
                 element.style.transition = `transform ${duration}ms ${easing}`;
               });
             }

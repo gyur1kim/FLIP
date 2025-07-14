@@ -11,6 +11,7 @@ import {
   Sixth,
   Tenth,
   Third,
+  Twelfth,
 } from "./page";
 
 function App() {
@@ -37,13 +38,14 @@ function App() {
       {page === 9 && <Ninth />}
       {page === 10 && <Tenth />}
       {page === 11 && <Eleventh />}
+      {page === 12 && <Twelfth />}
 
       {/* 버튼 */}
       <div className="flex justify-between w-full absolute bottom-[30px]  px-[50px]">
         <button onClick={handlePrev} disabled={page === 1}>
           ◀ 이전
         </button>
-        <button onClick={handleNext} disabled={page === 11}>
+        <button onClick={handleNext} disabled={page === 12}>
           다음 ▶
         </button>
       </div>

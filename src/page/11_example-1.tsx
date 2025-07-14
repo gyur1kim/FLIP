@@ -30,7 +30,7 @@ const Eleventh = () => {
 
   return (
     <div className="slide-page">
-      <h1 className="pb-[60px]">useFlip 예시 1</h1>
+      <h1 className="pb-[60px]">useFlip 예시</h1>
 
       <div className="flex gap-8">
         <div className="flex flex-col gap-2">

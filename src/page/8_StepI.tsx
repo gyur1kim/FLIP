@@ -7,7 +7,7 @@ const Eighth = () => {
 
   return (
     <div className="page">
-      <h1 className="pb-[100px]">Invert - 차이를 계산하고 이전 위치로 이동</h1>
+      <h1 className="pb-[100px]">Invert - 계산된 차이만큼 transform 적용</h1>
 
       <div className="flex gap-4 w-full items-center">
         {/* 실제 동작하는 예제 */}
