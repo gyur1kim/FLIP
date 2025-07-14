@@ -1,9 +1,36 @@
+import { useState } from "react";
+import { Fifth, First, Fourth, Second, Sixth, Third } from "./page";
+
 function App() {
+  const [page, setPage] = useState(1);
+
+  const handleNext = () => {
+    setPage(page + 1);
+  };
+
+  const handlePrev = () => {
+    setPage(page - 1);
+  };
+
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello World</h1>
-      <div className="text-red-500">안녕하세요</div>
-    </>
+    <div className="flex flex-col items-center justify-center h-screen relative">
+      {page === 1 && <First />}
+      {page === 2 && <Second />}
+      {page === 3 && <Third />}
+      {page === 4 && <Fourth />}
+      {page === 5 && <Fifth />}
+      {page === 6 && <Sixth />}
+
+      {/* 버튼 */}
+      <div className="flex gap-8 absolute bottom-[30px]">
+        <button onClick={handlePrev} disabled={page === 1}>
+          ◀ 이전
+        </button>
+        <button onClick={handleNext} disabled={page === 6}>
+          다음 ▶
+        </button>
+      </div>
+    </div>
   );
 }
 
