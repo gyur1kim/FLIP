@@ -1,4 +1,11 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* 커스텀 클래스 정의 */
 .slide-page {
@@ -15,6 +22,120 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+:root {
+  font-family: "apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial,
+    sans-serif;
+  line-height: 1.5;
+  font-size: 24px;
+  font-weight: 400;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: #ffffff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fcb69f;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #ffecd2;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #ffecd2;
+}
+
+strong {
+  background: rgba(255, 236, 210, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+li {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+blockquote {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  margin: 30px 0;
+  font-style: italic;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  padding: 12px 24px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8em;
+  backdrop-filter: blur(10px);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  transform: none;
+}
+
+/* 버튼 스타일 */
+.orange-button {
+  background: linear-gradient(45deg, #ffecd2, #fcb69f);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1em;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(252, 182, 159, 0.3);
+}
+
+.orange-button:hover {
+  background: linear-gradient(45deg, #ffecd2, #fcb69f);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(252, 182, 159, 0.4);
+}
+
+.orange-button:disabled {
+  background: linear-gradient(45deg, #ffecd2, #fcb69f);
+  color: #444;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: 0 2px 10px rgba(252, 182, 159, 0.2);
 }
 
 /* 데모 섹션 스타일 */
@@ -83,98 +204,4 @@ code {
   border-radius: 4px;
   font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
   font-size: 0.9em;
-}
-
-:root {
-  font-family: "apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial,
-    sans-serif;
-  line-height: 1.5;
-  font-size: 24px;
-  font-weight: 400;
-
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  color: #ffffff;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1 {
-  font-size: 2.5em;
-  font-weight: 600;
-  margin-bottom: 16px;
-  color: #fcb69f;
-}
-
-h2 {
-  font-size: 2em;
-  font-weight: 400;
-  margin-bottom: 10px;
-  color: #ffecd2;
-}
-
-h3 {
-  font-size: 1.5em;
-  font-weight: 400;
-  margin-bottom: 10px;
-  color: #ffecd2;
-}
-
-button {
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50px;
-  padding: 12px 24px;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1em;
-  backdrop-filter: blur(10px);
-}
-
-button:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
-}
-
-button:disabled {
-  cursor: not-allowed;
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.5);
-  transform: none;
-}
-
-/* 버튼 스타일 */
-.orange-button {
-  background: linear-gradient(45deg, #ffecd2, #fcb69f);
-  border: none;
-  border-radius: 50px;
-  padding: 12px 24px;
-  color: #444;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1em;
-  font-weight: 600;
-  box-shadow: 0 4px 15px rgba(252, 182, 159, 0.3);
-}
-
-.orange-button:hover {
-  background: linear-gradient(45deg, #ffecd2, #fcb69f);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(252, 182, 159, 0.4);
-}
-
-.orange-button:disabled {
-  background: linear-gradient(45deg, #ffecd2, #fcb69f);
-  color: #444;
-  cursor: not-allowed;
-  opacity: 0.6;
-  transform: none;
-  box-shadow: 0 2px 10px rgba(252, 182, 159, 0.2);
 }

@@ -22,7 +22,7 @@ function App() {
       {page === 6 && <Sixth />}
 
       {/* 버튼 */}
-      <div className="flex gap-8 absolute bottom-[30px]">
+      <div className="flex justify-between w-full absolute bottom-[30px]  px-[50px]">
         <button onClick={handlePrev} disabled={page === 1}>
           ◀ 이전
         </button>

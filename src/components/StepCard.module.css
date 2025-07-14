@@ -1,0 +1,46 @@
+.stepCard {
+  @apply flex flex-col items-center justify-center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border: 2px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* 테마별 스타일 */
+.stepCard-warning {
+  border-color: #ff7675;
+  background: rgba(255, 118, 117, 0.15);
+}
+.stepCard-normal {
+  border-color: #fdcb6e;
+  background: rgba(253, 203, 110, 0.15);
+}
+.stepCard-success {
+  border-color: #74b9ff;
+  background: rgba(116, 185, 255, 0.15);
+}
+
+.stepCardEmphasis {
+  @apply flex items-center justify-center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #ffecd2, #fcb69f);
+  border-radius: 50%;
+
+  font-weight: bold;
+  color: #333;
+  margin: 0 auto 15px;
+  font-size: 1.2em;
+}
+
+.stepCardTitle {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.stepCardDescription {
+  font-size: 1em;
+}
