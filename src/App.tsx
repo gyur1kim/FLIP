@@ -15,6 +15,8 @@ import {
   Twelfth,
 } from "./page";
 
+const LAST_PAGE = 12;
+
 function App() {
   const [page, setPage] = useState(1);
 
@@ -39,16 +41,16 @@ function App() {
       {page === 9 && <Ninth />}
       {page === 10 && <Tenth />}
       {page === 11 && <Eleventh />}
-      {page === 12 && <Twelfth />}
-      {page === 13 && <Thirteenth />}
+      {/* {page === 12 && <Twelfth />} */}
+      {page === 12 && <Thirteenth />}
 
       {/* 버튼 */}
       <div className="flex justify-between w-full absolute bottom-[30px]  px-[50px]">
         <button onClick={handlePrev} disabled={page === 1}>
           ◀ 이전
         </button>
-        <button onClick={handleNext} disabled={page === 13}>
-          {page === 13 ? "끝 🫠" : "다음 ▶"}
+        <button onClick={handleNext} disabled={page === LAST_PAGE}>
+          {page === LAST_PAGE ? "끝 🫠" : "다음 ▶"}
         </button>
       </div>
     </div>

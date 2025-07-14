@@ -24,17 +24,13 @@ export default function ExampleDetailFLIP() {
   const [foods] = useState(FOOD);
   const [selected, setSelected] = useState<string | null>(null);
   const { getElementRef, executeFLIPAnimation, isAnimating } = useFLIP({
-    duration: 700,
-  });
-  const { getElementRef: getImageRef, executeFLIPAnimation: executeImageFlipAnimation } = useFLIP({
-    duration: 700,
+    duration: 2000,
   });
 
   // 카드 클릭 시 상세로 FLIP
   const handleCardClick = (key: string) => {
     if (!isAnimating) {
       executeFLIPAnimation(() => setSelected(key));
-      executeImageFlipAnimation(() => setSelected(key));
     }
   };
 
@@ -42,7 +38,6 @@ export default function ExampleDetailFLIP() {
   const handleClose = () => {
     if (!isAnimating && selected) {
       executeFLIPAnimation(() => setSelected(null));
-      executeImageFlipAnimation(() => setSelected(null));
     }
   };
 
@@ -64,12 +59,7 @@ export default function ExampleDetailFLIP() {
               }}
             >
               {food.name}
-              <img
-                ref={getImageRef(food.key)}
-                src={food.img}
-                alt={food.name}
-                className="w-[30px] h-[30px] object-cover"
-              />
+              <img src={food.img} alt={food.name} className="w-[30px] h-[30px] object-cover" />
             </div>
           ))}
         </div>
@@ -87,7 +77,6 @@ export default function ExampleDetailFLIP() {
                 {selectedFood.name}
               </div>
               <img
-                ref={getImageRef(selectedFood.key)}
                 src={selectedFood.img}
                 alt={selectedFood.name}
                 style={{ width: 200, height: 200, borderRadius: 16, objectFit: "cover" }}
