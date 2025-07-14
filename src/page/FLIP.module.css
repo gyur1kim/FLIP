@@ -1,0 +1,82 @@
+.flipContainer {
+  position: relative;
+  width: 700px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 2px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.boxBorderBlue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: dashed 2px #8bcbf6;
+  border-radius: 10px;
+}
+
+.boxBorderRed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: dashed 2px #f6a0b0;
+  border-radius: 10px;
+}
+
+.box {
+  width: 90px;
+  height: 90px;
+  background-color: #9430ca;
+  border-radius: 7px;
+}
+
+.boxBlur {
+  width: 90px;
+  height: 90px;
+  background-color: #9430ca35;
+  border-radius: 7px;
+}
+
+.boxMove {
+  animation: move-box 3s linear reverse infinite;
+}
+
+.boxFlip {
+  animation: flip 3s linear infinite;
+}
+
+@keyframes move-box {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  30% {
+    transform: translate(0px, 0px);
+  }
+  90% {
+    transform: translate(340px, 100px);
+  }
+  100% {
+    transform: translate(340px, 100px);
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  10% {
+    transform: translate(0px, 0px);
+  }
+  70% {
+    transform: translate(340px, 100px);
+  }
+  100% {
+    transform: translate(340px, 100px);
+  }
+}

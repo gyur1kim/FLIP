@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Fifth, First, Fourth, Second, Third } from "./page";
+import { Eighth, Fifth, First, Fourth, Ninth, Second, Seventh, Sixth, Third } from "./page";
 
 function App() {
   const [page, setPage] = useState(1);
@@ -19,13 +19,17 @@ function App() {
       {page === 3 && <Third />}
       {page === 4 && <Fourth />}
       {page === 5 && <Fifth />}
+      {page === 6 && <Sixth />}
+      {page === 7 && <Seventh />}
+      {page === 8 && <Eighth />}
+      {page === 9 && <Ninth />}
 
       {/* 버튼 */}
       <div className="flex justify-between w-full absolute bottom-[30px]  px-[50px]">
         <button onClick={handlePrev} disabled={page === 1}>
           ◀ 이전
         </button>
-        <button onClick={handleNext} disabled={page === 6}>
+        <button onClick={handleNext} disabled={page === 9}>
           다음 ▶
         </button>
       </div>

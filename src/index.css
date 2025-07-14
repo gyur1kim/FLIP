@@ -8,6 +8,10 @@
 }
 
 /* 커스텀 클래스 정의 */
+.page {
+  @apply flex flex-col justify-center items-center px-30;
+}
+
 .slide-page {
   @apply flex flex-col justify-center items-center px-30;
   animation: slideIn 0.5s ease-out;
