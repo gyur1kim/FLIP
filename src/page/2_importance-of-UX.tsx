@@ -1,4 +1,3 @@
-import React from "react";
 import newsAppSurvey from "../assets/img/news-app-survey.png";
 import StepCard from "../components/StepCard";
 

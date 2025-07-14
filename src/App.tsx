@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Fifth, First, Fourth, Second, Sixth, Third } from "./page";
+import { Fifth, First, Fourth, Second, Third } from "./page";
 
 function App() {
   const [page, setPage] = useState(1);
@@ -19,7 +19,6 @@ function App() {
       {page === 3 && <Third />}
       {page === 4 && <Fourth />}
       {page === 5 && <Fifth />}
-      {page === 6 && <Sixth />}
 
       {/* 버튼 */}
       <div className="flex justify-between w-full absolute bottom-[30px]  px-[50px]">
