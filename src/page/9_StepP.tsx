@@ -23,7 +23,7 @@ const Ninth = () => {
         </div>
 
         {/* 코드 예제 */}
-        <img src={stepP} alt="step-p" className="w-[700px] h-fit" />
+        <img src={stepP} alt="step-p" className="w-[650px] h-fit" />
       </div>
     </div>
   );

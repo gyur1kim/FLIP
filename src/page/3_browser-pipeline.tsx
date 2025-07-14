@@ -48,9 +48,9 @@ const Third = () => {
       <p className="pb-[20px]">
         60fps 애니메이션을 위해서는 <strong>transform과 opacity만 사용</strong>해야함
       </p>
-      <p className="pb-[40px]">
+      <p className="pb-[40px] break-keep text-center">
         하지만 우리는 레이아웃 변화 (리스트 아이템의 순서 변경, 카드의 확장/축소, 그리드 레이아웃
-        변화 등등) 를 애니메이션으로 표현해야 하는데....?
+        변화 등등) 를<br /> 애니메이션으로 표현해야 하는데....?
       </p>
       <h3>
         이런 딜레마를 해결해주는 것이 바로 <strong>FLIP</strong> 기법!

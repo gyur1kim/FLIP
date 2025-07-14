@@ -23,7 +23,7 @@ const Eighth = () => {
         </div>
 
         {/* 코드 예제 */}
-        <img src={stepI} alt="step-i" className="w-[700px] h-fit" />
+        <img src={stepI} alt="step-i" className="w-[650px] h-fit" />
       </div>
     </div>
   );

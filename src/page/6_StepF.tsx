@@ -18,7 +18,7 @@ const Sixth = () => {
         </div>
 
         {/* 코드 예제 */}
-        <img src={stepF} alt="step-f" className="w-[700px] h-fit" />
+        <img src={stepF} alt="step-f" className="w-[650px] h-fit" />
       </div>
     </div>
   );
