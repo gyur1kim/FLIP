@@ -9,7 +9,7 @@ const Third = () => {
         <StepCard emphasis={"2"} title="Paint" description="픽셀 채우기" />
         <StepCard emphasis={"3"} title="Composite" description="레이어 합성" />
       </div>
-      <p className="pb-[40px]">
+      <p className="pb-[80px]">
         어떤 CSS 속성을 변경하느냐에 따라 <strong>성능이 크게 달라집니다</strong>
       </p>
       <div className="grid grid-cols-3 gap-4 pb-[40px]">
